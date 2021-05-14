@@ -3,9 +3,9 @@ import './App.css';
 function Register() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         Hello world
-      </header>
+      </header> */}
     </div>
   );
 }
