@@ -1,6 +1,7 @@
 import React from "react";
 import { button } from "@material-ui/core";
 import logo from "./logo.png";
+import Register from './Register/Register.js'
 import "./App.css";
 
 function App() {
@@ -11,14 +12,14 @@ function App() {
       </header>
       <img src={logo} className="App-logo" alt="logo" />
       <p>Lets tour in the Digital world</p>
-      <button className="Signin" type="submit">
+      <button className="Signin" type="submit" href={<Register /> } >
         Sign in
       </button>{" "}
       <br />
       <p>You do not have an account?</p>
       <a
         className="Signup"
-        href="https://www.figma.com/proto/eXdpe6JUcrnbiHYCfFXTgB/DigiApp?node-id=1%3A2&scaling=scale-down&page-id=0%3A1"
+        href={<Register /> }
         target="_blank"
         rel="noopener noreferrer"
       >
