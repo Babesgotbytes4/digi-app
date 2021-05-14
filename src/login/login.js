@@ -26,11 +26,17 @@ window.localStorage.setItem("users", JSON.stringify([
 ]) )
 
 
-// const checkUsers = (props) => {
-//     const { name,pin } = props;
-// if(name < 1) return "does not exist"
-// if (pin  4) ret
-// }
+const checkUsers = ( props) =>{
+    const {name, pin} = props;
+
+    if (name.legnth < 1) return "name does not exist";
+if (pin.legnth < 4) return "incorrect pin"
+
+const usersString = window.localStorage.getItem('users')
+
+
+}
+
 }
 
 export default Login;
