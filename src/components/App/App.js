@@ -4,6 +4,7 @@ import Shell from '../Shell';
 import Assessments from '../../views/Assessments'
 import Profile from '../../views/Profile'
 import Register from '../../views/Register'
+
 import Login from '../../views/Login'
 import { Dropdown } from '../../views/Dropdown/Dropdown';
 
@@ -18,6 +19,7 @@ export const App = () => {
           </Route>
           <Route path="/register">
             <Register />
+            {/* <Pin /> */}
           </Route>
           <Route path="/profile">
             <Profile />

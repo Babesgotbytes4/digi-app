@@ -77,10 +77,49 @@ function Register() {
           }}
         />
       </label>
+      <Pin />
     </form>
+    
   );
 }
 
-export default Register;
+class Pin extends React.PureComponent {
+    state = {
+      value: ""
+    };
+  
+    onChange = value => {
+      this.setState({ value });
+    };
+  
+    // onClear = () => {
+    //   this.setState({
+    //     value: ""
+    //   });
+    //   this.pin.clear();
+    // };
+  
+    render() {
+      const { value } = this.state;
+      return (
+        <div className="app">
+          <PinCode
+            length={4}
+            focus
+            // disabled
+            secret
+            ref={p => (this.pin = p)}
+            type="numeric"
+            onChange={this.onChange}
+          />
+          <div>{value}</div>
+          {/* <button onClick={this.onClear}>Clear</button> */}
+        </div>
+      );
+    }
+  }
+ 
+
+export default {Register};
 
 // export default Register;
