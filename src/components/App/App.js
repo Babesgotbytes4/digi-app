@@ -1,18 +1,18 @@
-// import React from 'react';
-
-import Login from '../login/pin'
-
-
-function App() {
-  return (
-    <div >
-      <h1>Login Page</h1>
+import React from 'react';
+import {Switch, Route, BrowserRouter} from "react-router-dom"
+// import Login from '../../login/pin'
+  // return (
+  //   <div >
+  //     <h1>Login Page</h1>
       
  
-   <Login/>
+  //  <Login/>
 
-    </div>
-  );
+  //   </div>
+  // );
+
+function App() {
+
 }
 
 export default App;
