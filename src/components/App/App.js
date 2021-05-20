@@ -19,7 +19,7 @@ export const App = () => {
           </Route>
           <Route path="/register">
             <Register />
-            {/* <Pin /> */}
+      
           </Route>
           <Route path="/profile">
             <Profile />
