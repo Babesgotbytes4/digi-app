@@ -1,17 +1,13 @@
 import React from "react";
-// import PinCode from "react-pin-input";
-import PinCode from "react-pin-code-input-component";
+
+
 
 function Register() {
-  const [username, setUsername] = React.useState(["", "", "", ""]);
-  const [pin, setPin] = React.useState(["", "", "", ""]);
-  const [confirmPin, setConfirmPin] = React.useState(["", "", "", ""]);
-  
+  const [username, setUsername] = React.useState([""]);
+  const [pin, setPin] = React.useState([""]);
+  const [confirmPin, setConfirmPin] = React.useState([""]);
   
 
-  function handleChange(e) {
-    setUsername(e.target.value);
-  }
   const addUser = (props) => {
     
     const { username, pin, confirmPin } = props;
@@ -36,7 +32,10 @@ function Register() {
       JSON.stringify([...usersData, { username, pin }])
     );
   };
-  
+  function handleChange(e) {
+    setUsername(e.target.value);
+  }
+
   function handleSubmit (e) {
     e.preventDefault();
     addUser(username);
@@ -65,7 +64,8 @@ function Register() {
         </label>
       </h2>
       <input
-        type="text"
+        type="number"
+        length="4"
         id="new-todo-input"
         className="input input__lg"
         name="text"
@@ -79,7 +79,8 @@ function Register() {
         </label>
       </h2>
       <input
-        type="text"
+        type="number"
+        length="4"
         id="new-todo-input"
         className="input input__lg"
         name="text"
@@ -95,42 +96,8 @@ function Register() {
   );
 }
 
-// class Pin extends React.PureComponent {
-//     state = {
-//       value: ""
-//     };
 
-//     onChange = value => {
-//       this.setState({ value });
-//     };
-
-//     // onClear = () => {
-//     //   this.setState({
-//     //     value: ""
-//     //   });
-//     //   this.pin.clear();
-//     // };
-
-//     render() {
-//       const { value } = this.state;
-//       return (
-//         <div className="app">
-//           <PinCode
-//             length={4}
-//             focus
-//             // disabled
-//             secret
-//             ref={p => (this.pin = p)}
-//             type="numeric"
-//             onChange={this.onChange}
-//           />
-//           <div>{value}</div>
-//           {/* <button onClick={this.onClear}>Clear</button> */}
-//         </div>
-//       );
-//     }
-//   }
 
 export default Register;
 
-// export default Register;
+
