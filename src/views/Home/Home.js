@@ -6,7 +6,7 @@ import logo from "./logo.png.jpeg";
 export const Home = () => {
   return (
     <div>
-      <img src={logo} alt="Logo" />;
+      <img src={logo} alt="Logo" />
 
       <Button href={"/login"}>
         Login 
