@@ -1,9 +1,15 @@
 import React from "react";
-import PinCode from "react-pin-input";
+
+
 
 function Register() {
-  const [pinValues, setPinValues] = React.useState(["", "", "", ""]);
+  const [username, setUsername] = React.useState([""]);
+  const [pin, setPin] = React.useState([""]);
+  const [confirmPin, setConfirmPin] = React.useState([""]);
+  
+
   const addUser = (props) => {
+    
     const { username, pin, confirmPin } = props;
 
     if (username.length < 3) return "username is too shot";
@@ -11,7 +17,7 @@ function Register() {
     if (confirmPin !== pin) return "pin doesn't match";
 
     const userString = window.localStorage.getItem("users");
-
+    
     if (!userString) {
       // saving the name and the pin
       window.localStorage.setItem("uses", JSON.stringify([{ username, pin }]));
@@ -26,61 +32,72 @@ function Register() {
       JSON.stringify([...usersData, { username, pin }])
     );
   };
-  //check if the user exists
+  function handleChange(e) {
+    setUsername(e.target.value);
+  }
 
-  // const checkUsers = (props) => {
-  //   const { username, pin } = props;
-
-  //   if (username.length < 1) return "no- username";
-  //   if (pin < 4) return "pin is too short";
-
-  //   const userString = window.localStorage.getItem("users");
-
-  //   if (!userString) return "no user created";
-
-  //   const usersData = JSON.parse(userString);
-  //   const username = usersData.find(
-  //     (checkingUser) => checkingUser.username === username
-  //   );
-
-  //   //if no user existing
-  //   if (!username) return "user does not exist";
-  //   if (username.pin === pin) return null;
-  // };
-
+  function handleSubmit (e) {
+    e.preventDefault();
+    addUser(username);
+    setPin("");
+  }
   return (
     <form>
-      <label>
-        Name:
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Enter Pin:
-        <PinCode
-          disabled
-          length={4}
-          values={addUser.confirmPin}
-          onChange={({ values }) => {
-            setPinValues(values);
-          }}
-        />
-      </label>
-
-      <label>
-        Cornfim Pin:
-        <PinCode
-          disabled
-          length={4}
-          values={addUser.pinValues}
-          onChange={({ values }) => {
-            setPinValues(values);
-          }}
-        />
-      </label>
+     <form onSubmit={handleSubmit}>
+      <h2 className="label-wrapper">
+        <label htmlFor="new-todo-input" className="label__lg">
+          Name:
+        </label>
+      </h2>
+      <input
+        type="text"
+        id="new-todo-input"
+        className="input input__lg"
+        name="text"
+        autoComplete="off"
+        value={username}
+        onChange={handleChange}
+      />
+      <h2 className="label-wrapper">
+        <label htmlFor="new-todo-input" className="label__lg">
+          Pin:
+        </label>
+      </h2>
+      <input
+        type="number"
+        length="4"
+        id="new-todo-input"
+        className="input input__lg"
+        name="text"
+        autoComplete="off"
+        value={pin}
+        onChange={handleChange}
+      />
+      <h2 className="label-wrapper">
+        <label htmlFor="new-todo-input" className="label__lg">
+          Confirm Pin:
+        </label>
+      </h2>
+      <input
+        type="number"
+        length="4"
+        id="new-todo-input"
+        className="input input__lg"
+        name="text"
+        autoComplete="off"
+        value={confirmPin}
+        onChange={handleChange}
+      />
+      <button type="submit" className="btn btn__primary btn__lg">
+        Add
+      </button>
+    </form>
     </form>
   );
 }
 
+
+
 export default Register;
 
-// export default Register;
+
