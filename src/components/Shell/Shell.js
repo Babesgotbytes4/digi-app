@@ -16,8 +16,8 @@ export const Shell = (props) => {
     <>
     { children }
     <Menu>
-        {/* <div>{children}</div> */}
-        <div>Profile</div>
+     cnvfhh   
+        
     </Menu>
     </>
     )

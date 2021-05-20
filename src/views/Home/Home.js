@@ -8,11 +8,11 @@ export const Home = () => {
     <div>
       <img src={logo} alt="Logo" />;
 
-      <IconButton href={`#/login`}>
+      <IconButton href={`/login`}>
         <login />
       </IconButton>
       
-      <IconButton href={`#/register`}>
+      <IconButton href={`/register`}>
         <register />
       </IconButton>
     </div>
