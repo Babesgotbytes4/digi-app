@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Button } from "@material-ui/core";
  
 
 
@@ -63,12 +64,17 @@ export const Dropdown = () => {
     <br />
     <br />
     <div>
-      <br />
-      <button type='submit' id='submit'>CONTINUE</button>
-    <br />
-    <br />
-    <br />
-    <button type='submit' id='submit'>SKIP</button>
+    
+
+    
+    <Button href={"/Assessments"}>
+        CONTINUE 
+      </Button>
+
+      <Button href={"/Assessments"}>
+        SKIP
+      </Button>
+    
     
      </div>
     </Container>
