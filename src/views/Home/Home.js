@@ -5,8 +5,11 @@ import logo from "./logo.png.jpeg";
 
 export const Home = () => {
   return (
+    <>
+    <img src={logo} alt="Logo" />
+    
     <div>
-      <img src={logo} alt="Logo" />
+      
 
       <Button href={"/login"}>
         Login 
@@ -16,6 +19,7 @@ export const Home = () => {
         Register
       </Button>
     </div>
+    </>
   );
 };
 
