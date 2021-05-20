@@ -11,7 +11,7 @@ export const Home = () => {
       <IconButton href={`#/login`}>
         <login />
       </IconButton>
-      
+
       <IconButton href={`#/register`}>
         <register />
       </IconButton>

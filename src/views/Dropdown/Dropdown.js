@@ -15,16 +15,11 @@ const Container = styled.p`
 background-color: smocky ;
 width: 80%;
 
-margin: 50px auto;
-padding-bottom: 50px;
+margin: 10px auto;
+padding-bottom: 10px;
 
 `
 const Label = styled.p`
-height: 30px;
-  justify-self: start;
-
-`
-const Button = styled.p`
 height: 30px;
   justify-self: start;
 
@@ -69,7 +64,7 @@ export const Dropdown = () => {
     <br />
     <div>
       <br />
-      <Button type='submit' id='submit'>CONTINUE</Button>
+      <button type='submit' id='submit'>CONTINUE</button>
     <br />
     <br />
     <br />
