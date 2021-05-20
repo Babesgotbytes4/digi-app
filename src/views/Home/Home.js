@@ -1,20 +1,20 @@
 import React from "react";
-import { IconButton } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import styled from "styled-components";
-import logo from "./componets/App/logo.png";
+import logo from "./logo.png";
 
 export const Home = () => {
   return (
     <div>
       <img src={logo} alt="Logo" />;
 
-      <IconButton href={`#/login`}>
-        <login />
-      </IconButton>
+      <Button href={"/login"}>
+        Login 
+      </Button>
       
-      <IconButton href={`#/register`}>
-        <register />
-      </IconButton>
+      <Button href={"/register"}>
+        Register
+      </Button>
     </div>
   );
 };
