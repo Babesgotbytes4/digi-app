@@ -1,29 +1,69 @@
 const SYNC_INTERVAL_IN_MS = 30 * 60 * 1000;
 
-const calcIfShowIdSync = () => {
-    const appString = window. localStorage.getItem('app');
-    const currentTimeStamp = new Date().getTime();
-
-    if(!appString) {
-        window.localStorage.setItem(
-            'app',
-            JSON.stringify({ lastSynced: currentTimeStamp })
-        )
-
-        return true;
-    }
-    const appData = JSON.parse(appString);
-
-    if(appData.lastSynced + SYNC_INTERVAL_IN_MS > currentTimeStamp) 
-    return false;
-
-    window.localStorage.setItem(
-        'app',
-        JSON.stringify({ lastSynced: currentTimeStamp })
-    )
-
+const INITIAL_STATE = {
+  lastSynced: null,
+  loggedInName: null,
 };
 
-export default {
-    calcIfShowIdSync
+const appString = window.localStorage.getItem("app");
+
+if (!appString) window.localStorage.setItem("app", INITIAL_STATE);
+const appData = appString ? JSON.parse(appString) : INITIAL_STATE;
+
+const getStorage = () => {
+  const string = window.localStorage.getItem("app");
+  if (!string) return INITIAL_STATE;
+  return JSON.parse(string);
+};
+
+const updateStorage = (object) =>
+  window.localStorage.setItem(
+    "app",
+    JSON.stringify({
+      ...getStorage(),
+      ...object,
+    })
+  );
+
+const calcIfShowIdSync = () => {
+  const appString = window.localStorage.getItem("app");
+  const currentTimeStamp = new Date().getTime();
+  const { lastSynced } = getStorage();
+
+  if (
+    !lastSynced ||
+    appData.lastSynced + SYNC_INTERVAL_IN_MS <= currentTimeStamp
+  ) {
+    updateStorage({ lastSynced: currentTimeStamp });
+    return true;
+  }
+
+  return false;
+};
+
+const getLoggedInName = () => {
+    const { loggedInName } = getStorage()
+    return loggedInName;
 }
+
+
+const logUserIn = (name) => {
+  const loggedInName = getLoggedInName();
+
+  if (!name || name.length < 1) return "no-name";
+  if (loggedInName) return "already-logged-in";
+  updateStorage({ loggedInName: name });
+};
+
+const logUserOut = () => {
+    const loggedInName = getLoggedInName();
+
+  if (!loggedInName) return "already-logged-out";
+  updateStorage({ loggedInName: null });
+};
+export default {
+  calcIfShowIdSync,
+  logUserIn,
+  logUserOut,
+  getLoggedInName,
+};

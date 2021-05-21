@@ -1,18 +1,41 @@
-import React from 'react';
-import {Switch, Route, BrowserRouter} from "react-router-dom"
-// import Login from '../../login/pin'
-  // return (
-  //   <div >
-  //     <h1>Login Page</h1>
+
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Shell from '../Shell';
+import Assessments from '../../views/Assessments'
+import Profile from '../../views/Profile'
+import Register from '../../views/Register'
+
+import Login from '../../views/Login'
+import { Dropdown } from '../../views/Dropdown/Dropdown';
+
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <Shell>
+        <Switch>
+         
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
       
- 
-  //  <Login/>
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/Dropdown">
+            <Dropdown />
+          </Route>
+          <Route path="/">
+            <Assessments />
+          </Route>
 
-  //   </div>
-  // );
+        </Switch>
+      </Shell>
+    </BrowserRouter>
 
-function App() {
-
+  )
 }
 
 export default App;

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import PinInput from "react-pin-input";
 
-const Text = () => {
+const Login = () => {
   const [name, setItem] = useState("");
 
   return (
@@ -37,7 +37,7 @@ class App extends React.PureComponent {
     const { value } = this.state;
     return (
       <div>
-        <Text />
+        <Login />
         <>
           <h3>Enter the correct pin</h3>
           <PinInput
@@ -56,4 +56,4 @@ class App extends React.PureComponent {
     );
   }
 }
-export default App;
+export default Login;

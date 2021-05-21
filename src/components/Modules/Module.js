@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import cms from '../api/cms/cms'
-import app from '../api/app/app';
-import users from '../api/users/users'
+import cms from '../../api/cms/cms'
+import app from '../../api/app/app';
+import users from '../../api/users/users'
 
 const error = users.addUser({ name: "phelisa", pin: "1234", confirmPin: "1234"});
 console.log(error)
