@@ -11,13 +11,13 @@ export const Home = () => {
     <div>
       
 
-      <IconButton href={`/login`}>
-        <login />
-      </IconButton>
+      <Button href={"/login"}>
+        Login 
+      </Button>
       
-      <IconButton href={`/register`}>
-        <register />
-      </IconButton>
+      <Button href={"/register"}>
+        Register
+      </Button>
     </div>
     </>
   );
