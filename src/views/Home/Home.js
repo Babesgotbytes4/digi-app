@@ -1,10 +1,12 @@
 import React from "react";
 import {Button} from "@material-ui/core";
-import styled from "styled-components";
+// import styled from "styled-components";
 import logo from "./logo.png.jpeg";
 
 export const Home = () => {
+
  
+
   return (
     <>
     <img src={logo} alt="Logo" />
