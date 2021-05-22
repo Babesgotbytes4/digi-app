@@ -1,6 +1,10 @@
 import axios from "axios";
 
 const GET_ALL_ASSESSMENT_QUERY = `
+<<<<<<< HEAD
+=======
+
+>>>>>>> d5c3904e7abc2b66b975adee51bb0e53f98ab5ab
 {
     assessments{
       id
@@ -38,4 +42,8 @@ const syncAssessment = async () => {
   console.log(assessments);
 };
 
+<<<<<<< HEAD
 export default syncAssessment;
+=======
+export default syncAssessment;
+>>>>>>> d5c3904e7abc2b66b975adee51bb0e53f98ab5ab

@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 const appString = window.localStorage.getItem("app");
 
-if (!appString) window.localStorage.setItem("app", INITIAL_STATE);
+if (!appString) window.localStorage.setItem("app", JSON.stringify(INITIAL_STATE));
 const appData = appString ? JSON.parse(appString) : INITIAL_STATE;
 
 const getStorage = () => {
@@ -26,7 +26,7 @@ const updateStorage = (object) =>
   );
 
 const calcIfShowIdSync = () => {
-  const appString = window.localStorage.getItem("app");
+  // const appString = window.localStorage.getItem("app");
   const currentTimeStamp = new Date().getTime();
   const { lastSynced } = getStorage();
 
@@ -61,9 +61,14 @@ const logUserOut = () => {
   if (!loggedInName) return "already-logged-out";
   updateStorage({ loggedInName: null });
 };
-export default {
+
+const app = {
+ 
   calcIfShowIdSync,
   logUserIn,
   logUserOut,
   getLoggedInName,
+
 };
+
+export default app;
