@@ -19,7 +19,7 @@ function Register() {
 
     if (!userString) {
       // saving the name and the pin
-      window.localStorage.setItem("uses", JSON.stringify([{ username, pin }]));
+      window.localStorage.setItem("users", JSON.stringify([{ username, pin }]));
       return null;
     }
     const usersData = JSON.parse(userString);
