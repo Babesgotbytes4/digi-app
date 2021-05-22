@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 const appString = window.localStorage.getItem("app");
 
-if (!appString) window.localStorage.setItem("app", INITIAL_STATE);
+if (!appString) window.localStorage.setItem("app", JSON.stringify(INITIAL_STATE));
 const appData = appString ? JSON.parse(appString) : INITIAL_STATE;
 
 const getStorage = () => {
