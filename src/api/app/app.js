@@ -26,7 +26,7 @@ const updateStorage = (object) =>
   );
 
 const calcIfShowIdSync = () => {
-  const appString = window.localStorage.getItem("app");
+  // const appString = window.localStorage.getItem("app");
   const currentTimeStamp = new Date().getTime();
   const { lastSynced } = getStorage();
 
@@ -61,9 +61,14 @@ const logUserOut = () => {
   if (!loggedInName) return "already-logged-out";
   updateStorage({ loggedInName: null });
 };
-export default {
+
+const app = {
+ 
   calcIfShowIdSync,
   logUserIn,
   logUserOut,
   getLoggedInName,
+
 };
+
+export default app;

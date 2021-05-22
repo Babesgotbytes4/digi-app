@@ -18,7 +18,7 @@ export const useAuth = (props) => {
     if (shouldBeLoggedOut && app.getLoggedInName()) {
       history.push("/assessments");
     }
-  }, []);
+  }, [history, shouldBeLoggedIn, shouldBeLoggedOut]);
 
   const handlePinInput = (event) => setPin(event.target.value);
   const handleConfirmPinInput = (event) => setConfirmPin(event.target.value);

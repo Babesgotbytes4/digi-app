@@ -39,7 +39,9 @@ const checkUser = (props) => {
   if (user.pin === pin) return null;
 };
 
-export default {
-  addUser,
-  checkUser,
-};
+const users = {
+    addUser,
+    checkUser,
+  };
+  
+export default users
