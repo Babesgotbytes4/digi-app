@@ -1,15 +1,12 @@
 import React from "react";
-
-
+import ReactDOM from "react-dom";
 
 function Register() {
-  const [username, setUsername] = React.useState([""]);
-  const [pin, setPin] = React.useState([""]);
-  const [confirmPin, setConfirmPin] = React.useState([""]);
-  
+  const [username, setUsername] = React.useState("");
+  const [pin, setPin] = React.useState("");
+  const [confirmPin, setConfirmPin] = React.useState("");
 
   const addUser = (props) => {
-    
     const { username, pin, confirmPin } = props;
 
     if (username.length < 3) return "username is too shot";
@@ -17,7 +14,7 @@ function Register() {
     if (confirmPin !== pin) return "pin doesn't match";
 
     const userString = window.localStorage.getItem("users");
-    
+
     if (!userString) {
       // saving the name and the pin
       window.localStorage.setItem("uses", JSON.stringify([{ username, pin }]));
@@ -36,14 +33,13 @@ function Register() {
     setUsername(e.target.value);
   }
 
-  function handleSubmit (e) {
+  function handleSubmit(e) {
     e.preventDefault();
     addUser(username);
-    setPin("");
+    
   }
   return (
-    <form>
-     <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Name:
@@ -58,21 +54,23 @@ function Register() {
         value={username}
         onChange={handleChange}
       />
-      <h2 className="label-wrapper">
+      <h4 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Pin:
+          <br />
+          <input
+            type="number"
+            length="4"
+            id="new-todo-input"
+            className="input input__lg"
+            name="text"
+            autoComplete="off"
+            value={pin}
+            onChange={(e) => setPin(e.target.value)}
+          />
         </label>
-      </h2>
-      <input
-        type="number"
-        length="4"
-        id="new-todo-input"
-        className="input input__lg"
-        name="text"
-        autoComplete="off"
-        value={pin}
-        onChange={handleChange}
-      />
+      </h4>
+
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Confirm Pin:
@@ -86,18 +84,13 @@ function Register() {
         name="text"
         autoComplete="off"
         value={confirmPin}
-        onChange={handleChange}
+        onChange={(e) => setConfirmPin(e.target.value)}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit" className="btn ">
         Add
       </button>
-    </form>
     </form>
   );
 }
 
-
-
 export default Register;
-
-

@@ -1,9 +1,10 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import styled from "styled-components";
 import logo from "./logo.png.jpeg";
 
 export const Home = () => {
+  const IconButton = () =>{
   return (
     <>
     <img src={logo} alt="Logo" />
@@ -11,16 +12,17 @@ export const Home = () => {
     <div>
       
 
-      <Button href={"/login"}>
-        Login 
-      </Button>
+      <IconButton href={`/login`}>
+        <login />
+      </IconButton>
       
-      <Button href={"/register"}>
-        Register
-      </Button>
+      <IconButton href={`/register`}>
+        <register />
+      </IconButton>
     </div>
     </>
   );
+  }
 };
 
 export default Home;
