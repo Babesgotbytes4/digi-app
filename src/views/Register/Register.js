@@ -5,9 +5,11 @@ function Register() {
   const [username, setUsername] = React.useState("");
   const [pin, setPin] = React.useState("");
   const [confirmPin, setConfirmPin] = React.useState("");
+  const [error, setError] =React.useState(null);
+  // const { user, setUser } = React.useState("");
 
-  const addUser = (props) => {
-    const { username, pin, confirmPin } = props;
+  const addUser = () => {
+    // const { username, pin, confirmPin } = props;
 
     if (username.length < 3) return "username is too shot";
     if (pin.length < 4) return "pin is too short";
@@ -35,11 +37,18 @@ function Register() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    addUser(username);
-    
+   const response =  addUser();
+   if (response ) setError(response);
+  
+  localStorage.setItem('setUsername', setUsername);
+  localStorage.setItem('username', setUsername ? username : '');
+  
   }
   return (
+
     <form onSubmit={handleSubmit}>
+
+      
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Name:
@@ -86,6 +95,9 @@ function Register() {
         value={confirmPin}
         onChange={(e) => setConfirmPin(e.target.value)}
       />
+      <div>
+        {error}
+      </div>
       <button type="submit" className="btn ">
         Add
       </button>
