@@ -27,7 +27,10 @@ height: 30px;
 `
 
 
-export const Dropdown = () => {
+export const Dropdown = (props) => {
+  const {disabled} = props;
+
+
     return (
     <Container>
  
@@ -35,6 +38,7 @@ export const Dropdown = () => {
 <Paragraph>Let us know a little about you.</Paragraph>
 <Label for='dropdown'>SELECT YOUR LOCATION :</Label>
   <select id='dropdown'>
+  <option disabled selected value>Select an option</option>
   <option value="option 1">Khayelitsha</option>
    <option value="option 2">Gugulethu</option>
  <option value="option 2">Phillipi</option>
@@ -42,15 +46,19 @@ export const Dropdown = () => {
  <option value="option 2">Samora Machel</option>
  <option value="option 2">Other</option>
   </select>
+ 
+
   <br />
   <br />
   <br />
 <div>
   <Label for='dropdown-catagory'>WHICH CATAGORY YOU BELONG TO :</Label>
   <select id='dropdown-catagory'>
-    <option value='Teacher'>Teacher</option>
-    <option value='Adult'>Adult</option>
-    <option value='High Schol Student'>High Schol Student</option>
+  <option disabled selected value>Select an option</option>
+
+    <option value='Teacher' required>Teacher</option>
+    <option value='Adult'  required>Adult</option>
+    <option value='High Schol Student'  required>High Schol Student</option>
 
   </select>
   </div>
@@ -58,9 +66,9 @@ export const Dropdown = () => {
   <br />
   <label target>WHAT ARE YOUR GOALS :</label>
   
-    <label for='a'><input type='checkbox' name='lt' id ='a' value='self-learning' />Upskill</label>
-     <label for='b'><input type='checkbox' name='lt' id ='b' value='learning with teacher' />Employmeny</label>
-     <label for='c'><input type='checkbox' name='lt' id ='c' value='group learning' />Pesronal Use</label>
+    <label for='a'><input type='checkbox' name='lt' id ='a' value='self-learning'  required/>Upskill</label>
+     <label for='b'><input type='checkbox' name='lt' id ='b' value='learning with teacher'  required />Employmeny</label>
+     <label for='c'><input type='checkbox' name='lt' id ='c' value='group learning'  required/>Pesronal Use</label>
     <br />
     <br />
     <div>
@@ -71,7 +79,8 @@ export const Dropdown = () => {
         CONTINUE 
       </Button>
 
-      <Button href={"/Assessments"}>
+      <Button 
+      href={disabled ? undefined : "/Assessments"}>
         SKIP
       </Button>
     
