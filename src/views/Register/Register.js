@@ -1,16 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 function Register() {
   const [username, setUsername] = React.useState("");
   const [pin, setPin] = React.useState("");
   const [confirmPin, setConfirmPin] = React.useState("");
-  const [error, setError] =React.useState(null);
-  // const { user, setUser } = React.useState("");
+  const [error, setError] = React.useState(null);
 
   const addUser = () => {
-    // const { username, pin, confirmPin } = props;
-
     if (username.length < 3) return "username is too shot";
     if (pin.length < 4) return "pin is too short";
     if (confirmPin !== pin) return "pin doesn't match";
@@ -37,23 +34,19 @@ function Register() {
 
   function handleSubmit(e) {
     e.preventDefault();
-   const response =  addUser();
-   if (response ) setError(response);
-  
-  localStorage.setItem('setUsername', setUsername);
-  localStorage.setItem('username', setUsername ? username : '');
-  
+    const response = addUser();
+    if (response) setError(response);
+
+    // localStorage.setItem("setUsername", setUsername);
+    // localStorage.setItem("username", setUsername ? username : "");
   }
   return (
-
-    <form onSubmit={handleSubmit}>
-
-      
-      <h2 className="label-wrapper">
+    <form onSubmit={handleSubmit} className="form">
+      <h4 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Name:
         </label>
-      </h2>
+      </h4>
       <input
         type="text"
         id="new-todo-input"
@@ -80,11 +73,11 @@ function Register() {
         </label>
       </h4>
 
-      <h2 className="label-wrapper">
+      <h4 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           Confirm Pin:
         </label>
-      </h2>
+      </h4>
       <input
         type="number"
         length="4"
@@ -95,11 +88,9 @@ function Register() {
         value={confirmPin}
         onChange={(e) => setConfirmPin(e.target.value)}
       />
-      <div>
-        {error}
-      </div>
+      <div>{error}</div>
       <button type="submit" className="btn ">
-        Add
+        Sign up
       </button>
     </form>
   );

@@ -178,52 +178,25 @@ Variables
     align-items: center;
     border-radius: var(--radius);
   }
-  .item button,
-  .item a {
-    background: transparent;
-    border-color: transparent;
-    color: var(--clr-primary-5);
-    letter-spacing: var(--spacing);
-    cursor: pointer;
-  }
-  .item {
-    padding: 1rem 2rem;
-  }
-  .item h4 {
-    margin-bottom: 0;
-  }
-  .item p {
-    margin-bottom: 0;
-  }
-  .modal {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--clr-white);
-    display: inline-block;
-    padding: 0.25rem 1rem;
-    border-radius: var(--radius);
-    text-transform: capitalize;
-  }
   
-  .modal p {
-    margin-bottom: 0;
-    color: var(--clr-red-dark);
-  }
+
+  
+  
   .form {
-    background: var(--clr-white);
+    /* background: var(--clr-white); */
     max-width: var(--fixed-width);
     margin: 0 auto;
+    margin-top: 2rem;
     margin-bottom: 4rem;
     padding: 1rem 2rem;
     border-radius: var(--radius);
   }
   .form input {
-    background: var(--clr-grey-10);
+    background: var(--clr-white);
     border-color: transparent;
     border-radius: var(--radius);
     padding: 0.25rem 0.5rem;
+    width: 60%;
   }
   .form-control {
     margin: 0.5rem 0;
