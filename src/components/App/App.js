@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Shell from '../Shell';
 import Assessments from '../../views/Assessments';
