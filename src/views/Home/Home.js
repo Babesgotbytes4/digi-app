@@ -1,9 +1,10 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import styled from "styled-components";
 import logo from "./logo.png.jpeg";
 
 export const Home = () => {
+  const IconButton = () =>{
   return (
     <>
     <img src={logo} alt="Logo" />
@@ -21,6 +22,7 @@ export const Home = () => {
     </div>
     </>
   );
+  }
 };
 
 export default Home;
