@@ -1,7 +1,8 @@
 import React from "react";
 import {Button} from "@material-ui/core";
 // import styled from "styled-components";
-import logo from "./logo.png.jpeg";
+import '../../index.css'
+import logo from "./digi-logo.png";
 
 export const Home = () => {
   // const IconButton = () =>{
