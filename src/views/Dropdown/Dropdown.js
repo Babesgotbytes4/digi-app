@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import useDropdown from "./useDropdown";
 
 const Paragraph = styled.p`
-  padding: 60px;
+  padding: 50px;
   text-align: center;
   background: white;
   color: black;
