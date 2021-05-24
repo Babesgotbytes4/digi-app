@@ -12,21 +12,7 @@ const Button = styled.button`
 
 
 export const Assessments = () => {
-    return <div><h1>Basic</h1>
-
-    <Button href={"/login"}>
-    Intro 
-  </Button>
-  <Button href={"/login"}>
-    Keyboard 
-  </Button>
-  <Button href={"/login"}>
-    Mouse + Mousepad
-  </Button>
-  <Button href={"/login"}>
-    Other 
-  </Button>
-  </div>
+    return <div>Basic</div>
 };
 
 export default Assessments;
