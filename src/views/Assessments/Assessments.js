@@ -8,7 +8,7 @@ export const Assessments = () => {
     return (
     
     <div>
-        <button onClick={handleLogOutButton}>Log out</button>
+        <button onClick={handleLogOutButton}>Log out Now</button>
     </div>
         
         )

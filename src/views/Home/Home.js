@@ -5,7 +5,9 @@ import '../../index.css'
 import logo from "./digi-logo.png";
 
 export const Home = () => {
-  // const IconButton = () =>{
+
+ 
+
   return (
     <>
     <img src={logo} alt="Logo" />
@@ -24,5 +26,6 @@ export const Home = () => {
     </>
   );
   }
+
 
 export default Home;
