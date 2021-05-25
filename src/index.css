@@ -179,7 +179,12 @@ Variables
     border-radius: var(--radius);
   }
   
-
+  *{
+    margin: 0 auto;
+  }
+  body{
+    text-align: center;
+  }
   
   
   .form {

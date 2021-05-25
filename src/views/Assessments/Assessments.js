@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 // import {Button} from "@material-ui/core";
 // import useAuth from "../../utilities/useAuth";
@@ -36,6 +37,22 @@ const checkAndSync = async () => {
 
   const response = JSON.parse(window.localStorage.getItem("assessments"))
   setAssessments(response);
+=======
+import React from 'react';
+import useAuth from '../../utilities/useAuth'
+
+export const Assessments = () => {
+    const {handleLogOutButton}=useAuth({
+        shouldBeLoggedIn:true,
+    })
+    return (
+    
+    <div>
+        <button onClick={handleLogOutButton}>Log out</button>
+    </div>
+        
+        )
+
 };
 
 useEffect(() => checkAndSync(), []);
