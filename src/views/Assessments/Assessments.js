@@ -1,18 +1,59 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
+// import {Button} from "@material-ui/core";
+// import useAuth from "../../utilities/useAuth";
+// import styled from "styled-components";
+// import Link from "../Link/Link";
 
-const Button = styled.button`
-    background-color: #ccb3ff;
-    padding: 5px 70px;
-    width: 700px;
-    height:  80px;
-    margin-left: .5rem;
-    
-`
+import cms from '../../api/cms/cms';
+import app from "../../api/app/app";
 
 
-export const Assessments = () => {
-    return <div>Basic</div>
+
+
+// export const Logout = () => {
+//   const { handleLogOutButton } = useAuth({
+//     shouldBeLoggedIn: true,
+//   });
+//   return (
+//     <div>
+//       <button onClick={handleLogOutButton}>Log out</button>
+//     </div>
+//   );
+// };
+
+
+
+ function Assessments() {
+
+        
+const [assessments,  setAssessments] = useState([])
+
+const checkAndSync = async () => {
+  if(app.calcIfShowIdSync()) {
+    const response = await cms.syncAssessments();
+    setAssessments(response);
+  }
+
+  const response = JSON.parse(window.localStorage.getItem("assessments"))
+  setAssessments(response);
 };
 
-export default Assessments;
+useEffect(() => checkAndSync(), []);
+
+
+return (
+  <div>
+    <div>
+      {assessments.map(({ name }) => (
+        <div>{name}</div>     
+      ))}
+    </div>
+  </div>
+);
+
+
+}
+   
+  
+
+  export default Assessments;
