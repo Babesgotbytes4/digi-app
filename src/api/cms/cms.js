@@ -41,6 +41,4 @@ const syncAssessments = async () => {
   return assessments;
 };
 
-export default{
-   syncAssessments,
-};
+export default syncAssessments;
