@@ -41,7 +41,7 @@ export const useAuth = (props) => {
     
 
 
-    history.push('/login')''
+    history.push('/login')
 
   };
   const handleSignupForm =(event)=>{
