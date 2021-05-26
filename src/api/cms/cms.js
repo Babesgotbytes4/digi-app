@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const GET_ALL_ASSESSMENT_QUERY = `
 
 {
@@ -24,7 +25,7 @@ const GET_ALL_ASSESSMENT_QUERY = `
   }
   
 `;
-const syncAssessment = async () => {
+const syncAssessments = async () => {
   const {
     data: {
       data: {
@@ -36,7 +37,8 @@ const syncAssessment = async () => {
     { query: GET_ALL_ASSESSMENT_QUERY }
   );
 
-  console.log(assessments);
+  window.localStorage.setItem("assessments", JSON.stringify(assessments));
+  return assessments;
 };
 
-export default syncAssessment;
+export default syncAssessments;
