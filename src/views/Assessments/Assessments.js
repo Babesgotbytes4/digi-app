@@ -25,7 +25,7 @@ function Assessments() {
   };
 
   useEffect(() => checkAndSync(), []);
-
+ console.log(assessments)
   return (
     <div>
       <div>
