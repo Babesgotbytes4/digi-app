@@ -7,7 +7,8 @@ import Register from '../../views/Register';
 
 import Login from '../../views/Login';
 import { Dropdown } from '../../views/Dropdown/Dropdown';
-import Home from '../../views/Home'
+import Home from '../../views/Home';
+import SingleAssessment from "../../views/SingleAssessment/SingleAssessment"
 
 export const App = () => {
   return (
@@ -17,6 +18,10 @@ export const App = () => {
          
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/assessment/:assessmentId">
+            <SingleAssessment />
           </Route>
 
           <Route path="/register">
