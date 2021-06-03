@@ -31,7 +31,20 @@ export const Shell = (props) => {
     </Nav>
     { children }
     <Menu>
-     cnvfhh   
+    <ul>
+        <li>
+            Assessments
+        </li>
+
+        <li>
+            Profile
+        </li>
+
+        <li>
+            About
+        </li>
+    </ul>
+     
         
     </Menu>
     </>
