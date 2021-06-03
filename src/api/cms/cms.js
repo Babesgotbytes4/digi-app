@@ -43,12 +43,7 @@ const syncAssessments = async () => {
   return assessments;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default syncAssessment;
-=======
-export default syncAssessment;
->>>>>>> d5c3904e7abc2b66b975adee51bb0e53f98ab5ab
-=======
+
+
 export default syncAssessments;
->>>>>>> 9d354edd68f1c7d2f98801d171d0df8944372285
+
