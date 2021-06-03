@@ -27,7 +27,7 @@ export const useAuth = (props) => {
   const handleLoginForm = (event) => {
     if (event.preventDefault) event.preventDefault();
     const response = users.checkUser({ name, pin });
-    app.logUserIn(name);
+    app.logUserIn(name,pin);
 
     if (response)return setError(response);
 

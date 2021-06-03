@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import useAuth from "../../utilities/useAuth";
 import styled from "styled-components";
 // import Link from "../Link/Link";
@@ -7,14 +7,19 @@ import styled from "styled-components";
 import syncAssessments from "../../api/cms/cms";
 import app from "../../api/app/app";
 
-const List = styled.button`
-background-color: #8E6984;
+const List = styled(Button)`
+&&{
+  background-color: #8E6984;
   padding: 2px;
   width: 100%;
   height: 80px;
   margin-left: 0.5rem;
   text-transform: uppercase;
-`;
+}
+
+`
+
+;
 
 
 
@@ -44,10 +49,10 @@ function Assessments() {
     <div>
       <div>
         <button onClick={handleLogOutButton}>Log out</button>
-        {assessments !== null && assessments.map(({ name }) => (
+        {assessments !== null && assessments.map(({ name,id }) => (
           
             <div className="menu">
-                <List className='btn' href={"/SingleAssessment"}>{name}</List>
+                <List className='btn' href={`/assessment/${id}`}>{name}</List>
             </div>
           
         ))}
