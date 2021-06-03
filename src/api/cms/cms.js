@@ -2,7 +2,6 @@ import axios from "axios";
 
 
 const GET_ALL_ASSESSMENT_QUERY = `
-
 {
     assessments{
       id
@@ -44,4 +43,7 @@ const syncAssessments = async () => {
   return assessments;
 };
 
+
+
 export default syncAssessments;
+
