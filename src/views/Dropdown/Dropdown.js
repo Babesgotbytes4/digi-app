@@ -36,7 +36,7 @@ export const Dropdown = (props) => {
       <Label for="dropdown">SELECT YOUR LOCATION :</Label>
       <select id="dropdown" onChange={handleLocationInput}>
        <option value={null} selected={location === null}>PLease select</option>
-        <option value="Khayelitsha" selected={location === "Khayelitsha"}>Khayelitsha</option> {" "}
+        <option value="Khayelitsha" selected={location === "Khayelitsha"}>Khayelitsha</option>
         <option value="Gugulethu" selected={location === "Gugulethu"}>Gugulethu</option>
         <option value="Phillipi" selected={location === "Phillipi"}>Phillipi</option>
         <option value="Langa" selected={location === "Langa"}>Langa</option>

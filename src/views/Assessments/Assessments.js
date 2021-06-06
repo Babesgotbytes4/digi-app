@@ -49,7 +49,7 @@ function Assessments() {
     <div>
       <div>
         <button onClick={handleLogOutButton}>Log out</button>
-        {assessments !== null && assessments.map(({ name,id }) => (
+        {assessments.map(({ name,id }) => (
           
             <div className="menu">
                 <List className='btn' href={`/assessment/${id}`}>{name}</List>
@@ -58,7 +58,7 @@ function Assessments() {
         ))}
       </div>
     </div>
-  
+// 0735933906
   )
 }
 export default Assessments;

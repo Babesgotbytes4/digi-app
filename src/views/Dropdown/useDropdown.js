@@ -38,7 +38,7 @@ const useDropdown = () => {
     handleCategoryInput,
     handleGoalsInput,
     handleFormSubmit,
-    message
+   
   };
 };
 
