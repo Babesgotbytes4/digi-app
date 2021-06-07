@@ -5,7 +5,7 @@ import useDropdown from '../Dropdown/useDropdown'
 
 export const Profile = () => {
 const {name, pin} = users;
-const { catergory, goal,Message} = useDropdown;
+const { catergory, goal,Message} = useDropdown();
 
 const INITIAL_DATA = [];
 

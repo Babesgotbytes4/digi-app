@@ -49,6 +49,7 @@ function Assessments() {
     <div>
       <div>
         <button onClick={handleLogOutButton}>Log out</button>
+        
         {assessments.map(({ name,id }) => (
           
             <div className="menu">
