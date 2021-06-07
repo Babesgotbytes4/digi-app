@@ -58,9 +58,9 @@ function Register() {
         onChange={handleConfirmPinInput}
       />
       <div>{error}</div>
-      <button type="submit" className="btn ">
-        Sign up
-      </button>
+      <button type="submit" className="btn "> 
+     Sign up
+    </button> 
     </form>
   );
 }
