@@ -25,6 +25,10 @@ export const App = () => {
             <Login />
           </Route>
 
+          <Route path="/assessment/:assessmentId">
+            <SingleAssessment />
+          </Route>
+
           <Route path="/register">
             <Register />
           </Route>

@@ -151,7 +151,7 @@ Variables
   }
   .btn {
     display: inline-block;
-    background: var(--clr-primary-5);
+    background: red;
     color: var(--clr-white);
     padding: 0.25rem 0.75rem;
     border-radius: var(--radius);
@@ -164,6 +164,7 @@ Variables
     margin-right: 0.5rem;
     cursor: pointer;
     transition: var(--transition);
+    width: 100%;
   }
   .btn:hover {
     background: var(--clr-primary-1);
