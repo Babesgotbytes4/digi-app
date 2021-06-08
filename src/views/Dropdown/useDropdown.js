@@ -38,8 +38,16 @@ const useDropdown = () => {
     handleCategoryInput,
     handleGoalsInput,
     handleFormSubmit,
+<<<<<<< HEAD
+    
+  };
+};
+
+export default useDropdown;
+=======
     message
   };
 };
 
 export default useDropdown;
+>>>>>>> d4c395de5c37dc9f98a1f689fb060b3ec0403ad7

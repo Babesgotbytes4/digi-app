@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import useDropdown from "./useDropdown";
 
 const Paragraph = styled.p`
-  padding: 60px;
+  padding: 50px;
   text-align: center;
   background: white;
   color: black;
@@ -14,7 +14,6 @@ const Paragraph = styled.p`
 const Container = styled.form`
   background-color: smocky;
   width: 80%;
-
   margin: 10px auto;
   padding-bottom: 10px;
 `;
@@ -36,7 +35,7 @@ export const Dropdown = (props) => {
       <Label for="dropdown">SELECT YOUR LOCATION :</Label>
       <select id="dropdown" onChange={handleLocationInput}>
        <option value={null} selected={location === null}>PLease select</option>
-        <option value="Khayelitsha" selected={location === "Khayelitsha"}>Khayelitsha</option> {" "}
+        <option value="Khayelitsha" selected={location === "Khayelitsha"}>Khayelitsha</option> {" "}
         <option value="Gugulethu" selected={location === "Gugulethu"}>Gugulethu</option>
         <option value="Phillipi" selected={location === "Phillipi"}>Phillipi</option>
         <option value="Langa" selected={location === "Langa"}>Langa</option>
