@@ -43,6 +43,3 @@ const useDropdown = () => {
 };
 
 export default useDropdown;
-
-
-
