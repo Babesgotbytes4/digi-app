@@ -12,6 +12,7 @@ const INITIAL_DATA = [];
 const getData =(name, pin)=>{
     const usersString = window.localStorage.getItem(users, useDropdown);
     if(!usersString) return INITIAL_DATA;
+    console.log(usersString)
     return JSON.parse(usersString);
 }
 const setData =()=> {

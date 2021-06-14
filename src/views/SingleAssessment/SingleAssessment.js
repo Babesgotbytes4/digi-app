@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Accordion } from "@material-ui/core";
+import { Button, Accordion ,FormLabel} from "@material-ui/core";
 import styled from "styled-components";
 import { QuestionAnswer } from "@material-ui/icons";
 // import Assessments from "../Assessments"
 
-const List = styled(Button)`
+const List = styled.div`
   && {
     background-color: #8e6984;
     padding: 2px;
@@ -39,10 +39,9 @@ const SingleAssessment = () => {
       <div>{singleAssessment.difficulty}</div>
       <div>{singleAssessment.name}</div>
 
-      {singleAssessment.questions.map(({id, questions}) => (
-        <List className="btn" href={`/singleAssessment.questions/${'questions'}`}>
-          {questions}
-        </List>
+      {singleAssessment.questions.map(({id, description:{html}}) => (
+        <List dangerouslySetInnerHTML={{__html:html}} />
+        
       ))}
     </div>
   );
