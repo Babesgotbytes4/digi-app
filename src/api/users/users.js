@@ -50,8 +50,8 @@ const checkUser = (props) => {
 };
 
 const users = {
-    addUser,
-    checkUser,
-  };
-  
-export default users
+  addUser,
+  checkUser,
+};
+
+export default users;
