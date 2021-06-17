@@ -4,7 +4,7 @@ import Shell from '../Shell';
 import Assessments from '../../views/Assessments';
 import Profile from '../../views/Profile';
 import Register from '../../views/Register';
-
+import SingleAssessment from '../../views/SingleAssessment/SingleAssessment';
 import Login from '../../views/Login';
 import { Dropdown } from '../../views/Dropdown/Dropdown';
 import Home from '../../views/Home'
