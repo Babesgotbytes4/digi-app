@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css";
 // import video from "./video.mp4";
-import ReactPlayer from 'react-player'
+import ReactPlayer from './video.mp4'
 
 export const Video = () => {
   return (
