@@ -1,3 +1,6 @@
+import users from '../users/users'
+
+
 const SYNC_INTERVAL_IN_MS = 30 * 60 * 1000;
 
 const INITIAL_STATE = {
