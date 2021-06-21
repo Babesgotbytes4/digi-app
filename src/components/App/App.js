@@ -1,6 +1,7 @@
 
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Shell from '../Shell';
+import About from '../../views/About/About'
 import Assessments from '../../views/Assessments';
 import Profile from '../../views/Profile';
 import Register from '../../views/Register';
@@ -20,6 +21,9 @@ export const App = () => {
     <BrowserRouter>
       <Shell>
         <Switch>
+        <Route path="/About">
+            <About />
+          </Route>
          
           <Route path="/login">
             <Login />
