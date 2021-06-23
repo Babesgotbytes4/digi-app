@@ -10,6 +10,7 @@ import app from "../../api/app/app";
 const List = styled(Button)`
 &&{
   background-color: #8E6984;
+  text-color: white;
   padding: 2px;
   width: 100%;
   height: 80px;
