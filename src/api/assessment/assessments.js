@@ -10,14 +10,14 @@ const BLACK_HASHES = {
 }
 
 const fetchHashes = async () => {
-    const { data } = await axios('/data/hashes.json')
+    const { data } = await axios('/data/hashes.json');
     return data;
-}
+};
 
 const fetchAssessments = async () => {
-    const { data } = await axios('/data/assessments.json')
-    return data
-}
+    const { data } = await axios('/data/assessments.json');
+    return data;
+};
 const createDatabase = async () => {
     const dbRequest = openDB("assessments", 1, {
         upgrade: (respondedDb) => {
@@ -88,7 +88,7 @@ const createDatabase = async () => {
         const localHashes = rawLocalHashes || BLACK_HASHES;
         if(
             localHashes.data.assessments &&
-            localHashes.data.assessments !== 
+            localHashes.data.assessments !== "" &&
             fetchedHashes.data.assessments === localHashes.data.assessments
             ) return;
 
@@ -104,7 +104,7 @@ const createDatabase = async () => {
             }
         };
         db.add("meta", newHashes)
-    }
+    };
 
 
     return {
@@ -118,5 +118,37 @@ const createDatabase = async () => {
 
 const assessments = createDatabase();
 assessments.sync();
+
 export { assessments };
 export default assessments;
+
+// import { openDB } from "idb";
+
+// const createDatabase = async () => {
+//     const dbRequest = openDB("assessments", 1, {
+//         upgrade: (respondedDb) => {
+//             respondedDb.createObjectStore("meta", { keyPath: "id" }
+//             );
+//             respondedDb.createObjectStore("data", { keyPath: "id" }
+//              );
+//         },
+//     });
+
+//     const add = async (newItem) => {
+//                 // const newItemsArray = Array.isArray(newItem) ? newItem : [newItem]
+//                 const db = await dbRequest;
+        
+//                 // const promiseArray = newItemsArray.map
+//                 // ((singleNewItem) => 
+//                 // new Promise((resolve) => {
+//                     db.add("data", newItem)
+//                 }
+//                 // await Promise.all(promiseArray).catch(console.error);
+//                return {
+//                    add,
+//                }
+//             };
+
+
+//    export const assessments = createDatabase();
+//    export default assessments;
