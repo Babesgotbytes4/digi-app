@@ -1,3 +1,6 @@
+
+
+ 
 import { openDB } from "idb";
 import axios from "axios";
 
@@ -18,7 +21,7 @@ const fetchAssessments = async () => {
     const { data } = await axios('/data/assessments.json');
     return data;
 };
-const createDatabase = async () => {
+const createDatabase = () => {
     const dbRequest = openDB("assessments", 1, {
         upgrade: (respondedDb) => {
             respondedDb.createObjectStore("meta", { keyPath: "id" }

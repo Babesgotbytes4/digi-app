@@ -97,19 +97,3 @@ export const App = () => {
 }
 
 export default App;
-
-// import React, { useEffect } from "react";
-// import { assessments } from "../../api/assessment"
-
-
-// const fakerAssesment = {
-//   id: "d59d7c7-b2e9-40cc-90fd-844cce524c0b",
-//   name: "Other Assessments@!",
-// }
-
-// export const App = () => {
-//     const handleClick = () => assessments.add(fakerAssesment);
-//     return  <button onClick={handleClick}>DO THE THING</button>;
-//   };
-  
-//   export default App;
