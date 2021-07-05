@@ -70,8 +70,9 @@ export const SingleAssessment = () => {
   );
 
   const questionsCount = singleAssessment.questions.length;
+  const resultsCount = allResults.length;
 
-  if (allResults === questionsCount) {
+  if (resultsCount + 1 === questionsCount) {
     const rightCount = allResults.filter((value) => value === "right").length;
 
     return (
@@ -105,13 +106,16 @@ export const SingleAssessment = () => {
   }
 
   const checkAnswer = (index) => {
-    if (index + 1 === answer) return setResult("right");
-    setResult("right");
+    if (index + 1 === answer) {
     setAllResults([...allResults, "right"]);
+     return setResult("right");
+  }
+    
+setAllResults([...allResults, "wrong"]);
+setResult("wrong");
     return;
   };
-  setAllResults([...allResults, "wrong"]);
-  setResult("wrong");
+ 
 
   return (
     <div>
