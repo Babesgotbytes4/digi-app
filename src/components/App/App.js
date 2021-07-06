@@ -94,7 +94,7 @@ export const App = () => {
 
   return  (
     <div>
-    <h1>Get the assessments</h1>
+    <h1>Get the list of assessments</h1>
   </div> 
   )
   
