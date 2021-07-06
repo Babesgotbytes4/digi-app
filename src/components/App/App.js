@@ -84,7 +84,7 @@
 
 
 import React, { useEffect } from 'react';
-import {assessments} from '../../api/assessments';
+import { assessments } from "../../api/assessment"
 
 export const App = () => {
  useEffect(() => {
@@ -92,10 +92,12 @@ export const App = () => {
  
  }, [])
 
-  return 
-  <div>
+  return  (
+    <div>
     <h1>Get the assessments</h1>
   </div> 
+  )
+  
 
 };
 export default App;

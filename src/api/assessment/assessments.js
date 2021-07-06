@@ -36,16 +36,16 @@ const createDatabase = () => {
         const promiseArray = newItemArray.map(
             (singleNewItem) => 
             new Promise((resolve) => {
-        db.add("data", newItem).then(() => resolve());
+        db.add("data", singleNewItem).then(() => resolve());
 
            })
        );
-       await Promise.all(promiseArray).catch(console.error());
+       await Promise.all(promiseArray).catch(console.error);
     };
 
     const update = async(newItem, partialUpdate) => {
         const db = await dbRequest;
-       if (!partialUpdate) return db.put("data", newItem);
+       if (!partialUpdate) return await db.put("data", newItem);
 
        const currentItem = await read(newItem.id);
 
@@ -57,12 +57,12 @@ const createDatabase = () => {
     };
 
 
-    const reset = async(newItem) => {
-       if(!newItem) throw new Error('No new items supplied');
+    const reset = async(newItems) => {
+       if(!newItems) throw new Error('No new items supplied');
 
         const db = await dbRequest;
        await db.clear("data");
-       await update(newItem)
+       await add(newItems)
     };
 
 
