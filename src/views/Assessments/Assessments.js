@@ -54,9 +54,7 @@ console.log(assessments)
         {assessments.map(({ name,id }) => (
           
             <div className="menu">
-
-              1235ft
-                {/* <List className='btn' href={`/assessment/${id}`}>{name}</List> */}
+                <List className='btn' href={`/assessment/${id}`}>{name}</List>
             </div>
           
         ))}
