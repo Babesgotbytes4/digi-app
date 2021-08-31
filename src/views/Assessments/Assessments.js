@@ -45,7 +45,7 @@ function Assessments() {
   };
 
   useEffect(() => checkAndSync(), []);
-
+console.log(assessments)
   return (
     <div>
       <div>
@@ -54,13 +54,14 @@ function Assessments() {
         {assessments.map(({ name,id }) => (
           
             <div className="menu">
-                <List className='btn' href={`/assessment/${id}`}>{name}</List>
+
+              1235ft
+                {/* <List className='btn' href={`/assessment/${id}`}>{name}</List> */}
             </div>
           
         ))}
       </div>
     </div>
-// 0735933906
   )
 }
 export default Assessments;
