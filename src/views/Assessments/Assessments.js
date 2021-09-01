@@ -10,6 +10,7 @@ import app from "../../api/app/app";
 const List = styled(Button)`
 &&{
   background-color: #8E6984;
+  text-color: white;
   padding: 2px;
   width: 100%;
   height: 80px;
@@ -44,7 +45,7 @@ function Assessments() {
   };
 
   useEffect(() => checkAndSync(), []);
-
+console.log(assessments)
   return (
     <div>
       <div>
@@ -59,7 +60,6 @@ function Assessments() {
         ))}
       </div>
     </div>
-// 0735933906
   )
 }
 export default Assessments;

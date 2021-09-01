@@ -85,3 +85,23 @@ export const App = () => {
 }
 
 export default App;
+
+
+// import React, { useEffect } from 'react';
+// import { assessments } from "../../api/assessment"
+
+// export const App = () => {
+//  useEffect(() => {
+//    assessments.read().then(console.log)
+ 
+//  }, [])
+
+//   return  (
+//     <div>
+//     <h1>Get the list of assessments</h1>
+//   </div> 
+//   )
+  
+
+// };
+// export default App;
