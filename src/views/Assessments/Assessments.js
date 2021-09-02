@@ -17,13 +17,7 @@ const List = styled(Button)`
   margin-left: 0.5rem;
   text-transform: uppercase;
 }
-
 `
-
-;
-
-
-
 function Assessments() {
   const { handleLogOutButton } = useAuth({
     shouldBeLoggedIn: true,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Button } from "@material-ui/core";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -77,14 +77,14 @@ export const SingleAssessment = () => {
 
     return (
       <div>
-        <h1>Done!</h1>
+        <h1>Done!{setSingleAssessment}</h1>
         <div>{rightCount} / {questionsCount}</div>
         <div>{Math.floor((rightCount / questionsCount) * 100)}% </div>
       </div>
     );
   }
   const activeQuestion = singleAssessment.questions[viewingQuestion];
-  const { answer, description, explanation, id, options } = activeQuestion;
+  const { answer, description, explanation,  options } = activeQuestion;
 
   if (result) {
     return (

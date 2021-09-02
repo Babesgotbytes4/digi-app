@@ -1,13 +1,13 @@
-import app from '../app/app';
-const updateUsers= (props) =>{
+// import app from '../app/app';
+// const updateUsers= (props) =>{
 
-  const loggedInName = app.getLoggedInName()
+//   const loggedInName = app.getLoggedInName()
   
-  const usersString = window.localStorage.getItem("users");
+//   const usersString = window.localStorage.getItem("users");
  
-  const usersData = JSON.parse(usersString);
-  const user = usersData.find(({name})=> name === loggedInName)
-}
+//   const usersData = JSON.parse(usersString);
+//    const user = usersData.find(({name})=> name === loggedInName)
+// }
 const addUser = (props) => {
   const { name, pin, confirmPin } = props;
   if (name.length < 1) return "no-name";
@@ -52,6 +52,7 @@ const checkUser = (props) => {
 const users = {
   addUser,
   checkUser,
+  // updateUsers
 };
 
 export default users;
