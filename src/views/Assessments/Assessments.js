@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 import useAuth from "../../utilities/useAuth";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import Summary from '../../components/Summary'
 // import Link from "../Link/Link";
@@ -9,19 +9,19 @@ import Summary from '../../components/Summary'
 import syncAssessments from "../../api/cms/cms";
 // import app from "../../api/app/app";
 
-const List = styled(Button)`
-&&{
-  background-color: #c9ada7;
-  text-color: white;
-  font-weight:bold;
-  padding: 2px;
-  width: 100%;
-  height: 70px;
-  margin:2px;
-  margin-left: 0.5rem;
-  text-transform: uppercase;
-}
-`
+// const List = styled(Button)`
+// &&{
+//   background-color: #c9ada7;
+//   text-color: white;
+//   font-weight:bold;
+//   padding: 2px;
+//   width: 100%;
+//   height: 70px;
+//   margin:2px;
+//   margin-left: 0.5rem;
+//   text-transform: uppercase;
+// }
+// `
 function Assessments() {
   const { handleLogOutButton } = useAuth({
     shouldBeLoggedIn: true,

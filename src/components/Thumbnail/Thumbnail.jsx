@@ -37,6 +37,4 @@ export const Thumbnail = (props) => {
 
 export default Thumbnail;
 
-{
-  /* <Image elevation={1} component="img" src={image} alt="" /> */
-}
+

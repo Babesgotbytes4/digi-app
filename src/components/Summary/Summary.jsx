@@ -11,7 +11,7 @@ import { ArrowForwardIos as ArrowIcon } from "@material-ui/icons";
 import { Title } from "../Title";
 import { Text } from "../Text";
 import { Score } from "./Summary.Score";
-import { Thumbnail }  from "../../components/Thumbnail";
+// import { Thumbnail }  from "../../components/Thumbnail";
 import { convertMinutes } from "./Summary.convertMinutes";
 
 const StyledLink = styled(Link)`
@@ -21,13 +21,13 @@ const StyledLink = styled(Link)`
 
 `;
 
-const Image = styled.div`
-  display: none;
+// const Image = styled.div`
+//   display: none;
   
-  @media (min-width: 400px) {
-    display: block;
-  }
-`;
+//   @media (min-width: 400px) {
+//     display: block;
+//   }
+// `;
 const Content = styled.div`
   flex-grow: 1;
   padding: ${tokens.spacing.m};
