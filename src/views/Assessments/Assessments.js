@@ -5,7 +5,7 @@ import styled from "styled-components";
 // import Link from "../Link/Link";
 
 import syncAssessments from "../../api/cms/cms";
-import app from "../../api/app/app";
+// import app from "../../api/app/app";
 
 const List = styled(Button)`
 &&{
