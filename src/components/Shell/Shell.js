@@ -17,6 +17,7 @@ const Menu = styled.div`
     width: 100%;
     bottom: 0;
     left: 0;
+    display: inline-block;
     background: grey
 
 `;
@@ -32,17 +33,24 @@ export const Shell = (props) => {
     { children }
     <Menu>
     <ul>
+        <div>
         <li>
             Assessments
         </li>
-
+        </div>
+        
+        <div>
         <li>
             Profile
         </li>
-
+        </div>
+        
+        <div>
         <li>
             About
         </li>
+        </div>
+        
     </ul>
      
         

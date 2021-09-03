@@ -7,7 +7,7 @@ const GET_ALL_ASSESSMENT_QUERY = `
       id
       name
       difficulty
-      timeAndMinutes
+      timeInMinutes
       questions{
         id 
         options

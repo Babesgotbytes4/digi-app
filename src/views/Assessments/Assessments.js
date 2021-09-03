@@ -13,7 +13,8 @@ const List = styled(Button)`
   text-color: white;
   padding: 2px;
   width: 100%;
-  height: 80px;
+  height: 70px;
+margin:2px;
   margin-left: 0.5rem;
   text-transform: uppercase;
 }
@@ -26,14 +27,14 @@ function Assessments() {
   const [assessments, setAssessments] = useState([]);
 
   const checkAndSync = async () => {
-    if (app.calcIfShowIdSync()) {
+    // if (app.calcIfShowIdSync()) {
       console.log(syncAssessments);
       const response = await syncAssessments();
       setAssessments(response); 
-    } else {
-      const response = JSON.parse(window.localStorage.getItem("assessments"));
-      setAssessments(response);
-    }
+    // } else {
+    //   const response = JSON.parse(window.localStorage.getItem("assessments"));
+    //   setAssessments(response);
+    // }
 
     
   };
