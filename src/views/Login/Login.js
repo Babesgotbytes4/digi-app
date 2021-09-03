@@ -14,9 +14,9 @@ const Login = () => {
         <input type="text" onChange={handleNameInput} value={name} />
 
         <h3>Enter Pin</h3>
-        <input type="numeric" onChange={handlePinInput} value={pin} />
+        <input type="password" onChange={handlePinInput} value={pin} />
 <br/>
-        <button type="submit">Login</button><p>or</p><a href='../Register/Register'>Sign up</a>
+        <button type="submit">Login</button><p>or</p><a href='/register'>Sign up</a>
         <br />
         <div>{error}</div>
         <br></br>
