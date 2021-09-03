@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
 import useAuth from "../../utilities/useAuth";
 import styled from "styled-components";
+
+import Summary from '../../components/Summary'
 // import Link from "../Link/Link";
 
 import syncAssessments from "../../api/cms/cms";
@@ -46,13 +48,9 @@ console.log(assessments)
     <div>
       <div>
         <button onClick={handleLogOutButton}>Log out</button>
-        
-        {assessments.map(({ name,id }) => (
-          
-            <div className="menu">
-                <List className='btn' href={`/assessment/${id}`}>{name}</List>
-            </div>
-          
+      {console.log(assessments)}
+        {assessments.map(({ name,id, difficulty, timeInMinutes  }) => (
+                <Summary title={name} href={`/assessment/${id}`} difficulty={difficulty} timeAsMinutes={timeInMinutes}/>
         ))}
       </div>
     </div>
