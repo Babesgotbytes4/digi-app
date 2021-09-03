@@ -9,8 +9,9 @@ import syncAssessments from "../../api/cms/cms";
 
 const List = styled(Button)`
 &&{
-  background-color: #8E6984;
+  background-color: blue;
   text-color: white;
+  font-weight:bold
   padding: 2px;
   width: 100%;
   height: 70px;
