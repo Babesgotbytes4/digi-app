@@ -9,13 +9,13 @@ import syncAssessments from "../../api/cms/cms";
 
 const List = styled(Button)`
 &&{
-  background-color: blue;
+  background-color: #c9ada7;
   text-color: white;
-  font-weight:bold
+  font-weight:bold;
   padding: 2px;
   width: 100%;
   height: 70px;
-margin:2px;
+  margin:2px;
   margin-left: 0.5rem;
   text-transform: uppercase;
 }

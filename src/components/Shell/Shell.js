@@ -12,12 +12,12 @@ const Nav = styled.div`
 
 `;
 
-const Menu = styled.div`
+const Menu = styled.li`
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-    display: inline-block;
+    display: flex;
     background: grey
 
 `;
@@ -31,30 +31,25 @@ export const Shell = (props) => {
         
     </Nav>
     { children }
+  
     <Menu>
-    <ul>
-        <div>
+       
         <li>
             Assessments
         </li>
-        </div>
-        
-        <div>
+    
         <li>
             Profile
         </li>
-        </div>
-        
-        <div>
+    
         <li>
             About
         </li>
-        </div>
-        
-    </ul>
-     
         
     </Menu>
+     
+        
+   
     </>
     )
 };
